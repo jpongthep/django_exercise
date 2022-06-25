@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>Move the mouse over the table rows to see the effect.</p>
+
+<table>
+  <tr>
+    <th></th>
+    <th>First Name</th>
+    <th>Home</th>
+    <th>Points</th>
+  </tr>
+  {% for person in person_list %}
+    {% if person.status != "" %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ person.full_name }}</td>
+            <td>{{ person.email }}</td>
+            <td>{{ person.position }}</td>
+        </tr>
+    {% endif %}
+  {% endfor %}
+</table>    
+{% endblock %}
