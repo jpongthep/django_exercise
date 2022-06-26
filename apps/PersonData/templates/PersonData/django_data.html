@@ -5,10 +5,12 @@
 
 <table>
   <tr>
-    <th></th>
-    <th>First Name</th>
-    <th>Home</th>
-    <th>Points</th>
+    <th>ลำดับ</th>
+    <th>ยศ ชื่อ นามสกุล</th>
+    <th>e-mail</th>
+    <th>ตำแหน่ง</th>
+    <th>มือถือ</th>
+    <th>สถานะ</th>
   </tr>
   {% for person in person_list %}
     {% if person.status != "" %}
@@ -17,6 +19,8 @@
             <td>{{ person.full_name }}</td>
             <td>{{ person.email }}</td>
             <td>{{ person.position }}</td>
+            <td>{{ person.mobile }}</td>
+            <td>{{ person.status }}</td>
         </tr>
     {% endif %}
   {% endfor %}
